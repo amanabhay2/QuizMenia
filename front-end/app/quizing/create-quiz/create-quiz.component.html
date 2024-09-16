@@ -1,0 +1,28 @@
+<section  class="left">
+    
+    <div style=" padding-top:30px;">
+      <span style="margin: 40px; font-size: 30px;">Create a quiz </span>
+      <form #myform="ngForm" (ngSubmit)="createQuiz(myform.value)" style="margin: 40px;">
+        <div style="float:left; ">
+          <label class="labels" name="domain">Domain</label>
+          <br />
+          <input ngModel class="textField" type="text" name="domain" placeholder="Enter Domain">
+        </div>
+        <div style="float:left; ">
+          <label class="labels" name="title">Title</label>
+          <br />
+          <input ngModel class="textField" type="text" name="title" placeholder="Enter Title of Quiz">
+        </div>
+        <div>
+          <label class="labels" name="count">Count</label> 
+          <br />
+          <input ngModel class="textField" type="number" name="count" placeholder="Enter count">
+        </div>
+        <button  style="margin-top: 60px;" id="getButton">Create Quiz</button>
+      </form>
+    </div>
+    
+  </section>
+  
+
+ 

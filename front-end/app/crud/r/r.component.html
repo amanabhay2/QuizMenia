@@ -1,0 +1,41 @@
+<section class="left">
+
+  <div style=" padding-top:30px;">
+    <span style="margin: 40px;">Search your Question</span>
+    <form #myfrm="ngForm" (ngSubmit)="getData(myfrm.value)" style="margin: 40px;">
+
+      <div>
+        <label>Enter Question ID</label>
+        <input ngModel type="number" name="id" class="poorArea" placeholder="enter id">
+        <br /><br /><br />
+        <button id="getButton">Get Questions</button>
+      </div>
+
+    </form>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR
+    <br /><br />
+    <button (click)="getAllQuestions()" id="getButton" style="margin-left: 67px;">Get All Questions</button>
+  </div>
+
+</section>
+<div class="divider2"></div>
+
+<section class="right">
+  <div style=" padding-top:30px;">
+    <div *ngFor="let d of data" id="questions" style="padding-left: 40px; font-size: 17px;">
+
+      <br /> Question: {{d.id}} &nbsp;&nbsp; Difficulty: {{d.difficulty}} &nbsp;&nbsp; Domain: {{d.domain}}
+      <br /> {{d.questiontitle}}
+      <br /> <input type="radio" name="option"> {{d.option1}}
+      <br /> <input type="radio" name="option"> {{d.option2}}
+      <br /> <input type="radio" name="option"> {{d.option3}}
+      <br /> <input type="radio" name="option"> {{d.option4}}
+      <br /><br />
+
+      <button id="getButton" (click)="switchVisibility()"> Answer </button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span *ngIf="show" style="color: white"> {{d.rightanswer}}</span>
+
+    </div>
+  </div>
+</section>

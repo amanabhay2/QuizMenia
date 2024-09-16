@@ -1,0 +1,47 @@
+.left{
+    background-color:rgb(111, 186, 247);
+    width: 24.5%;
+    float: left;
+    min-height: 90vh;
+    max-height: 90vh;
+    color: rgb(4, 42, 99);
+    font-size: 25px;
+}
+#getButton{
+    margin-left: 90px;
+    border-radius:20px;
+    padding: 10px 20px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(4, 42, 99);
+}
+.divider2{
+    width: 0.5%;
+    min-height: 90vh;
+    max-height: 90vh;
+    float: left;
+    background-image: linear-gradient(to right,rgb(4, 42, 99),rgb(111, 186, 247));
+}
+.right{
+    background-color:rgb(111, 186, 247);
+    width: 75%;
+    float:left;
+    min-height: 90vh;
+    max-height: 90vh;
+    color: rgb(4, 42, 99);
+    font-size: 25px;
+}
+input{
+    margin-left: 15px;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+}
+.poorText{
+        border: none;
+        border-left: 10px solid white;
+        border-radius: 15px;
+        margin: 25px;
+        height: 40px;
+        width: 320px;
+}

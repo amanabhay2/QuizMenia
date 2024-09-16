@@ -1,0 +1,43 @@
+.left{
+    background-color:rgb(111, 186, 247);
+    width: 100%;
+    float: left;
+    min-height: 110vh;
+    max-height: 90vh;
+    color: rgb(4, 42, 99);
+    font-size: 25px;
+}
+#getButton{
+    margin-left: 45px;
+    border-radius:20px;
+    padding: 10px 20px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(4, 42, 99);
+    float:left;
+}
+#updateButton{
+    margin-left: 45px;
+    border-radius:20px;
+    padding: 10px 20px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(4, 42, 99);
+}
+td{
+    font-size: 22px;
+    width: 220px;
+    height: 30px;
+    border: none;
+    margin: 20px;
+    padding: 12px;
+}
+input{
+    border: none;
+    padding: 7px;
+    border-radius: 14px;
+}
+textarea {
+    border-radius: 12px;
+    border: none;
+    width: 100%; /* Full-width */
+    box-sizing: border-box; /* Includes padding and border in the width */
+}

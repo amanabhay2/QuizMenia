@@ -1,0 +1,32 @@
+<section class="header">
+    <div class="divSpan">
+      <span>QuizMania</span>
+    </div> 
+    <button id="login">Log In</button>
+    <button id="signup">Sign Up</button>
+  </section>
+  <section class="tabs">
+    <a routerLink=""> <button (click)="navigateToHome()" id="tabButton">Home</button> </a>
+    <a routerLink="playQuiz"> <button (click)="navigateToPlayQuiz()" id="tabButton">Play Quiz</button> </a>
+    <a routerLink="createQuiz"> <button (click)="navigateToCreateQuiz()" id="tabButton">Create Quiz</button> </a>
+    <a routerLink="createQuestion"> <button (click)="navigateToCreateQuestion()" id="tabButton">Create Question</button> </a>
+    <a routerLink="readQuestion"> <button (click)="navigateToReadQuestion()" id="tabButton">Read Question</button> </a>
+    <a routerLink="deleteQuestion"> <button (click)="navigateToDeleteQuestion()" id="tabButton">Delete Question</button> </a>
+   </section>
+
+   <div class="divider1"></div>
+
+  <section id="container">
+    <router-outlet></router-outlet>
+  </section>
+  
+  <section class="footer">
+    <h1>Footer-Section</h1>
+  </section>
+
+  
+  
+ 
+  
+  
+  

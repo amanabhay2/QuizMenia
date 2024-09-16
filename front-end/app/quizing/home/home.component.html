@@ -1,0 +1,24 @@
+<section class="right">
+  <div style=" padding-top:30px;">
+    <h2 style="text-align: center; font-size: 35px;">Welcome to your favourite quizing platform!</h2>
+    <h6 id="questions" style="padding: 10px;text-align: center;">All the available quiz's appear below. </h6>
+    <h6 id="questions" style="padding: 5px;text-align: center;">User can click on play button of the quiz he wants to
+      play and quiz starts. </h6>
+
+    <div  style="padding-top: 35px;">
+
+      <div *ngFor="let q of quizes" id="quizes">
+        <div style="width: 20%;float: left;margin: 18px 70px;font-weight:bold;">Quiz Id: {{q.id}}</div>
+        <div style="width: 30%;float: left;margin: 18px 0px;font-weight:bold;">Quiz Title: {{q.title}}</div>
+        <a routerLink="playQuiz"> <button (click)="playRoute(q.id)" id="getButton">Play</button> </a>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!---->

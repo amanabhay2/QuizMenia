@@ -1,0 +1,50 @@
+<section class="left">
+  <div style=" margin: 30px 24%; ">
+    <span style="margin: 40px;">Search your Quiz</span>
+    <form #myform="ngForm" (ngSubmit)="getData(myform.value)" style="margin: 40px;display: inline;">
+      <input ngModel class="textField" placeholder="Enter Quiz Id" type="number" name="quizId">
+      <button id="getButton">Play Quiz</button>
+
+    </form>
+  </div>
+  <div *ngIf="show && id!=null" style="text-align: center">
+    <div style="margin: 100px 21%;">
+      <button (click)="toogleShow()" id="start">Start the Quiz</button>
+    </div>
+    <!-- This quiz consists of [X] questions and will take approximately [X] minutes to complete. -->
+    * Select your answers by clicking on the options provided.<br />
+    * You can navigate between questions by scrolling down.<br />
+    * Points are awarded for correct answers. <br />
+    * Your results will be displayed at the end of the quiz.<br />
+    * Ensure you have a stable internet connection and use a modern browser for the best experience.<br />
+    * Your responses are confidential and will be used only for quiz purposes
+  </div>
+  <div *ngIf="!show">
+
+    <div *ngFor="let d of data" id="questions"
+      style="box-shadow:  4px 4px 4px rgb(4, 42, 99) inset;border-left: 4px solid white; margin: 40px 7%; padding: 0px 5%; font-size: 17px;">
+
+      <br /> Question: {{d.id}}
+      <br /> {{d.questiontitle}}
+
+      <br /> <input type="radio" #aaa id="aaa" name="name" [value]="d.option1">
+      <label for="aaa">{{d.option1}}</label><br>
+
+      <input type="radio" #aaa id="aaa" name="name" [value]="d.option2">
+      <label for="aaa">{{d.option2}}</label><br>
+
+      <input type="radio" #aaa id="aaa" name="name" [value]="d.option3">
+      <label for="aaa">{{d.option3}}</label><br>
+
+      <input type="radio" #aaa id="aaa" name="name" [value]="d.option4">
+      <label for="aaa">{{d.option4}}</label>
+
+      <br /><br />
+
+      <button id="getButton" (click)="submitAnswer(d.id,aaa.value)">Submit Answer </button>
+
+
+    </div>
+
+  </div>
+</section>

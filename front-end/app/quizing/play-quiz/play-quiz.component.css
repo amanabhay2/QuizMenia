@@ -1,0 +1,30 @@
+.left{
+    background-color:rgb(111, 186, 247);
+    width: 100%;
+    float: left;
+    min-height: 90vh;
+    color: rgb(4, 42, 99);
+    font-size: 25px;
+}
+#start{
+    
+    border-radius:20px;
+    padding: 40px 80px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(4, 42, 99);
+}
+.textField{
+    border: none;
+    border-left: 10px solid white;
+    border-radius: 15px;
+    margin: 25px;
+    height: 40px;
+    width: 320px;
+}
+#getButton{
+    margin-left: 90px;
+    border-radius:20px;
+    padding: 10px 20px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(4, 42, 99);
+}

@@ -1,0 +1,76 @@
+<section class="left">
+
+  <div style="margin-left:35% ;margin-top: 75px;">
+    <span style="margin: 40px;">Add a new Question</span>
+    <form #myform="ngForm" (ngSubmit)="createQuestion(myform.value)">
+
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Question</td>
+            <td>
+              <textarea ngModel rows="4" cols="100" name="questiontitle"
+                placeholder="Enter your question here..."></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td>
+              <input ngModel type="number" name="id" placeholder="Ex: 1,2,..">
+            </td>
+          </tr>
+          <tr>
+            <td>Domain</td>
+            <td>
+              <input ngModel type="text" name="domain" placeholder="Ex: Java, C++">
+            </td>
+          </tr>
+          <tr>
+            <td>Difficulty</td>
+            <td>
+              <input ngModel type="text" name="difficulty" placeholder="Easy Medium High">
+            </td>
+          </tr>
+          <tr>
+            <td>Option1</td>
+            <td>
+              <input ngModel type="text" name="option1" placeholder="option1">
+            </td>
+          </tr>
+          <tr>
+            <td>Option2</td>
+            <td>
+              <input ngModel type="text" name="option2" placeholder="option2">
+            </td>
+          </tr>
+          <tr>
+            <td>Option3</td>
+            <td>
+              <input ngModel type="text" name="option3" placeholder="option3">
+            </td>
+          </tr>
+          <tr>
+            <td>Option4</td>
+            <td>
+              <input ngModel type="text" name="option4" placeholder="option4">
+            </td>
+          </tr>
+          <tr>
+            <td>Right Answer</td>
+            <td>
+              <input ngModel type="text" name="rightanswer" placeholder="right answer">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <button id="getButton">Create New Question</button>
+
+    </form>
+
+    <button (click)="updateQuestion(myform.value)" id="updateButton">Update Question</button>
+  </div>
+
+</section>
